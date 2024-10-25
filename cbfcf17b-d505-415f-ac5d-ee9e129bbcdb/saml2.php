@@ -861,15 +861,18 @@ CAQCgUAgEAgEAoFAIBAsAUX9P16Zi31dwTgAAAAAAElFTkSuQmCC" alt="Microsoft" class="d-b
         font-family: "Segoe UI", "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
     }
 
-    html,
-    body {
+    html,body {
         background-color: #e2e5d3;
         color: #1b1b1b;
-        background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/background.png');
-        background-size: cover;
         height: 100%;
-        width: 100%;
         margin: 0;
+    }
+
+    @media (min-width: 1024px) {
+        html,body {
+            background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('images/background.png');
+            background-size: cover;
+        }
     }
 
     section{
